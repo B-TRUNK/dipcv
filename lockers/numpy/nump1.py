@@ -1,4 +1,5 @@
 import numpy as np
+import skimage as ski
 import cv2
 
 
@@ -60,6 +61,20 @@ cv2.imshow("tinted" ,tinted_img)
 print(tinted_img)
 #cv2.imwrite("../../raw_imgs/hq-tinted-b.jpg" ,tinted_img)
 
+
+#image_rotation
+rotated_img = cv2.rotate(img ,cv2.ROTATE_90_CLOCKWISE)
+cv2.imwrite("../../raw_imgs/hqrot.jpg" ,rotated_img)
+
+#image_blurring(gaussian_filter)
+blurred_img = cv2.GaussianBlur(img ,(7 ,7) ,0)
+cv2.imwrite("../../raw_imgs/hqblur.jpg" ,blurred_img)
+
+#image_blurring(gaussian_filter)
+denoised_img = cv2.fastNlMeansDenoisingColored(
+    img, None, h=10, hColor=10, templateWindowSize=7, searchWindowSize=21
+)
+cv2.imwrite("../../raw_imgs/hqdenoised.jpg" ,denoised_img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
