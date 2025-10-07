@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from sklearn import linear_model
 
 #read a csv file using pandas
-df = pd.read_csv('../../data_files/cells.csv')
-cells_predict_df = pd.read_csv('../../data_files/cells_predict.csv')
+df = pd.read_csv('../../../data_files/cells.csv')
+cells_predict_df = pd.read_csv('../../../data_files/cells_predict.csv')
 #print(df)
 
 #plt.xlabel('time')
@@ -59,7 +59,7 @@ cells_predict_df['cells'] = predicted_list
 print(cells_predict_df)
 
 #export to csv
-cells_predict_df.to_csv('../../data_files/exported.csv')
+cells_predict_df.to_csv('../../../data_files/exported.csv')
 
 
 
