@@ -7,7 +7,7 @@ import numpy as np
 from matplotlib import pyplot as plt ,image as mpimg
 from skimage import io ,img_as_float ,img_as_ubyte
 import cv2
-"""
+
 #note images read by PIL are not arrays
 img = Image.open('../../raw_imgs/hq.jpg')
 print(img)
@@ -17,9 +17,9 @@ print(img.format)
 #converting into an array image 
 numpy_image = np.array(img)
 print(numpy_image)
-"""
+
 print('====================================================')
-"""
+
 #2 - Matplotlib
 img = mpimg.imread('../../raw_imgs/hq.jpg')
 print('Matplot image reading data :' ,type(img))
@@ -27,16 +27,16 @@ print('Image Shape :' ,img.shape)
 
 plt.imshow(img)
 plt.colorbar()
-"""
+
 
 
 print('====================================================')
-"""
+
 #3 - Skimage
 img = io.imread('../../raw_imgs/hq.jpg')
 print('Skimage image reading data :' ,type(img))
 plt.imshow(img)
-"""
+
 
 print('====================================================')
 #4 - OpenCV
